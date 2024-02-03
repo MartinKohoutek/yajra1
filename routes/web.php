@@ -31,3 +31,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::get('/user/edit/{id}', function ($id) {
+    dd($id);
+})->name('user.edit');
+
+Route::get('/user/{id}/delete', function ($id) {
+    dd($id);
+})->name('user.delete');
